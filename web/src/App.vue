@@ -2,4 +2,11 @@
   <router-view />
 </template>
 
-<style></style>
+<style>
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+</style>

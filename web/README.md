@@ -5,6 +5,11 @@
 npm create [project-name]
 ```
 
+## vue-daum-postcode
+```
+npm i vue-daum-postcode
+```
+
 ## Project init
 ```
 npm install
