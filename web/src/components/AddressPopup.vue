@@ -1,10 +1,24 @@
 <script setup lang="ts">
 import { VueDaumPostcode } from "vue-daum-postcode";
+import { Post } from "@/type/Post";
+
+const emit = defineEmits<{
+  (e: "completePost", post: Post): void;
+  (e: "closePostPopup"): void;
+}>();
+
+const completePost = (post: Post) => {
+  emit("completePost", post);
+};
+
+const closePostPopup = () => {
+  emit("closePostPopup");
+};
 </script>
 
 <template>
-  <div class="post-popup">
-    <VueDaumPostcode class="post-box" />
+  <div class="post-popup" @click="closePostPopup">
+    <VueDaumPostcode class="post-box" @complete="completePost" />
   </div>
 </template>
 
